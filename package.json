@@ -1,0 +1,25 @@
+{
+  "name": "nutrition-bank",
+  "version": "1.0.0",
+  "description": "A calculator that uses outside nutrition APIs to track user eating habits.",
+  "main": "server.js",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ironpup/nutrition-bank.git"
+  },
+  "author": "Chris Ding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ironpup/nutrition-bank/issues"
+  },
+  "homepage": "https://github.com/ironpup/nutrition-bank#readme"
+}
