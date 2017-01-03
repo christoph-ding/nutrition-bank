@@ -15,8 +15,8 @@ app.get("/", function(req, res) {
   res.sendFile(fullFilePath('index.html'));
 })
 
-app.get("/src/index.js", function(req, res) {  
-  res.sendFile(fullFilePath('src/index.js'));
+app.get("/index.js", function(req, res) {  
+  res.sendFile(fullFilePath('trans/index.js'));
 })
 
 // helper functions
