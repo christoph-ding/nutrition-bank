@@ -32,14 +32,14 @@ class NutritionBankApp extends React.Component {
 
 // title
 const Title = (props) => {
-  return (<h1> {props.name} </h1>);
+  return (<h1 className="title"> {props.name} </h1>);
 }
 
 // header buttons area
 class HeaderButtons extends React.Component {
   render(){
     return (
-      <div>
+      <div className="button-box">
         <h1> I am all the header buttons </h1>
         <SortButton sortType="by food group"/>
         <SortButton sortType="by calories"/>
@@ -57,7 +57,7 @@ class SortButton extends React.Component {
 
   render(){
     return (
-      <h2> {this.props.sortType} </h2>
+      <h2 className="sort-button"> {this.props.sortType} </h2>
     )
   }
 }
@@ -71,7 +71,7 @@ class NutritionCardList extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="nutrition-card-box">
         {this.props.foods.map( (food) => {
           return <h3 key={food}> {food} </h3>
           }
@@ -84,7 +84,7 @@ class NutritionCardList extends React.Component {
 // individual food card
 const NutritionCard = (props) => {
   return (
-    <h2> Card </h2>
+    <h2 className="nutrition-card"> Card </h2>
   )
 }
 

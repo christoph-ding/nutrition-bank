@@ -1,0 +1,23 @@
+.app {
+  background-color: blue;
+}
+
+.title {
+  background-color: green;
+}
+
+.button-box {
+  background-color: red;
+}
+
+.sort-button {
+  background-color: #93C0A4;
+}
+
+.nutrition-card-box {
+  background-color: gray;
+}
+
+.nutrition-card {
+  background-color: white;
+}

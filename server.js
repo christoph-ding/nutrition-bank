@@ -19,6 +19,10 @@ app.get("/index.js", function(req, res) {
   res.sendFile(fullFilePath('trans/index.js'));
 })
 
+app.get("/styles.css", function(req, res) {
+  res.sendFile(fullFilePath('styles.css'))
+})
+
 // helper functions
 var logHelpfulInfo = function () {
   console.log("Hi, I am running on port:", PORT);
