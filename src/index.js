@@ -4,7 +4,6 @@ console.log('loaded index.js');
 class NutritionBankApp extends React.Component {
   // constructor
 
-
   // get data
 
   // mount for data
@@ -20,17 +19,26 @@ class NutritionBankApp extends React.Component {
     return (
       <div className="app">
         <h1> I am the entire app </h1>
+        <Title />
+        <HeaderButtons />
+        <NutritionBank />
       </div>
     );
   }
 }
 
 // title
-const Title = (<h1> Title </h1>);
+const Title = () => {
+  return (<h1> Title </h1>);
+}
 
 // header buttons area
 class HeaderButtons extends React.Component {
-
+  render(){
+    return (
+      <h1> I am all the header buttons </h1>
+    )
+  }
 }
 
 // a single button
@@ -39,8 +47,12 @@ class SortButton extends React.Component {
 }
 
 // nutrition cards area
-class NutritionBank extends React.Component {
-
+class NutritionBank extends React.Component {  
+  render(){
+    return (
+      <h1> I am all the nutrition cards </h1>
+    )
+  }
 }
 
 // individual food card
