@@ -37,13 +37,21 @@ const Title = (props) => {
 
 // header buttons area
 class HeaderButtons extends React.Component {
+  doSomething(){
+    console.log('hey')
+  }
+
+  doSomething(){
+    console.log('hey')
+  }  
+
   render(){
     return (
       <div className="button-box">
         <h1> I am all the header buttons </h1>
-        <SortButton sortType="by food group"/>
-        <SortButton sortType="by calories"/>
-        <SortButton sortType="by volume"/>        
+        <SortButton clickAction={this.doSomething} sortType="by food group"/>
+        <SortButton clickAction={this.doSomething} sortType="by calories"/>
+        <SortButton clickAction={this.doSomething} sortType="by volume"/>        
       </div>
     )
   }
@@ -57,7 +65,7 @@ class SortButton extends React.Component {
 
   render(){
     return (
-      <h2 className="sort-button"> {this.props.sortType} </h2>
+      <h2 onClick={this.props.clickAction} className="sort-button"> {this.props.sortType} </h2>
     )
   }
 }
