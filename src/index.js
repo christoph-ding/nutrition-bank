@@ -1,18 +1,36 @@
 console.log('loaded index.js');
 
 // sample data
-const sampleFoods = ['jellybeans', 'salad', 'chips', 'steak', 'lobster', 'wine', 'kale']
+const sampleFoods = [
+  {'food': 'jellybeans', 'group': 'junk', 'calories': 150},
+  {'food': 'salad', 'group': 'vegetables', 'calories': 80},
+  {'food': 'chips', 'group': 'junk', 'calories': 200},
+  {'food': 'steak', 'group': 'meat', 'calories': 250},
+  {'food': 'lobster', 'group': 'meat', 'calories': 300},
+  {'food': 'wine', 'group': 'junk', 'calories': 120},
+  {'food': 'milk', 'group': 'dairy', 'calories': 70},
+  {'food': 'kale', 'group': 'vegetables', 'calories': 25}]
 
 // the entire app
 class NutritionBankApp extends React.Component {
   // constructor
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      data: ['test1', 'test2', 'test3']
+    }
+  }
   // get data
-
+  getData(){
+    this.setState({data: sampleFoods})
+  }
   // mount for data
-
     // did mount
-
+  componentWillMount() {
+    console.log(this.data);
+    this.getData();
+  }
     // will unmount
 
     // component will update? 
@@ -24,7 +42,7 @@ class NutritionBankApp extends React.Component {
         <h1> I am the entire app </h1>
         <Title name="NutritionBank"/>
         <HeaderButtons />
-        <NutritionCardList foods={sampleFoods}/>
+        <NutritionCardList foods={this.state.data}/>
       </div>
     );
   }
@@ -43,7 +61,7 @@ class HeaderButtons extends React.Component {
 
   doSomething(){
     console.log('hey')
-  }  
+  }
 
   render(){
     return (
