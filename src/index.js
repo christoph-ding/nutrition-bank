@@ -16,25 +16,25 @@ class NutritionBankApp extends React.Component {
   // constructor
   constructor(props) {
     super(props);
-
     this.state = {
-      data: ['test1', 'test2', 'test3']
+      data: []
     }
   }
   // get data
   getData(){
     this.setState({data: sampleFoods})
   }
-  // mount for data
-    // did mount
+  // will mount
   componentWillMount() {
     console.log(this.data);
     this.getData();
   }
-    // will unmount
-
-    // component will update? 
-
+  // will unmount
+  componentWillUnmount() {
+  }
+  // component will update? 
+  componentWillUpdate() {
+  }
   // update render to have all the embedded components
   render(){
     return (
@@ -55,21 +55,18 @@ const Title = (props) => {
 
 // header buttons area
 class HeaderButtons extends React.Component {
-  doSomething(){
-    console.log('hey')
+  constructor(props){
+    super()
   }
-
-  doSomething(){
-    console.log('hey')
+  sortBy(val){
   }
-
   render(){
     return (
       <div className="button-box">
         <h1> I am all the header buttons </h1>
-        <SortButton clickAction={this.doSomething} sortType="by food group"/>
-        <SortButton clickAction={this.doSomething} sortType="by calories"/>
-        <SortButton clickAction={this.doSomething} sortType="by volume"/>        
+        <SortButton clickAction={this.sortBy} sortType="by food group"/>
+        <SortButton clickAction={this.sortBy} sortType="by calories"/>
+        <SortButton clickAction={this.sortBy} sortType="by volume"/>        
       </div>
     )
   }
@@ -83,7 +80,8 @@ class SortButton extends React.Component {
 
   render(){
     return (
-      <h2 onClick={this.props.clickAction} className="sort-button"> {this.props.sortType} </h2>
+      <h2 onClick={this.props.clickAction(this.props.sortType
+        )} className="sort-button"> {this.props.sortType} </h2>
     )
   }
 }
