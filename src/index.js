@@ -1,18 +1,5 @@
 'use strict';
 
-console.log('loaded index.js');
-
-// sample data
-const sampleFoods = [
-  {'food': 'jellybeans', 'group': 'junk', 'calories': 150},
-  {'food': 'salad', 'group': 'vegetables', 'calories': 80},
-  {'food': 'chips', 'group': 'junk', 'calories': 200},
-  {'food': 'steak', 'group': 'meat', 'calories': 250},
-  {'food': 'lobster', 'group': 'meat', 'calories': 300},
-  {'food': 'wine', 'group': 'junk', 'calories': 120},
-  {'food': 'milk', 'group': 'dairy', 'calories': 70},
-  {'food': 'kale', 'group': 'vegetables', 'calories': 25}]
-
 class NutritionBankApp extends React.Componet {
   //constructor
   constructor(props) {
