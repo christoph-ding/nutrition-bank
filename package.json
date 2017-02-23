@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A calculator that uses outside nutrition APIs to track user eating habits.",
   "main": "server.js",
+  "scripts": {
+    "dev": "webpack -d --watch",
+    "build": "webpack -p"
+  }, 
   "dependencies": {
     "express": "^4.14.0"
   },
@@ -16,9 +20,6 @@
     "babel-preset-es2016": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "webpack": "^2.2.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
